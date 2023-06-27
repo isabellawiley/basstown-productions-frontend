@@ -1,8 +1,8 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Faq from "./components/Faq";
+import Header from "./components/Header";
 import Home from "./components/Home";
-import Navbar from "./components/Navbar";
 import Productions from "./components/Productions";
 import Services from "./components/Services";
 import { Routes, Route } from "react-router-dom";
@@ -10,7 +10,7 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div>
-      <Navbar/>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
