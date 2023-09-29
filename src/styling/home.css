@@ -79,6 +79,10 @@
         letter-spacing: 0;
     }
 
+    .overlay.productions {
+        font-size: 7.5vh;
+    }
+
     .quote-container, .quote-container:first-child {
         flex-direction: column;
         font-size: 3vh;
