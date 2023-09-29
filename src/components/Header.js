@@ -1,35 +1,51 @@
 import { Link } from "react-router-dom";
 import '../styling/header.css';
 import { useState } from "react";
-
+import Logo from "./images/Logo";
 function Header(){
-    const [menuOpen, setMenuOpen] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    function handleMenuClick(val){
+        setMenuOpen(val);
+        let body = document.querySelector('body');
+        if(!menuOpen){
+            body.classList.add('fixed-pos');
+        }
+        else {
+            body.classList.remove('fixed-pos');
+        }
+    }
 
     return(
         <div className="header">
-            <div className="logo">LOGO</div>
-            <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "CLOSE" : "MENU"}</button>
+            <div className="logo-container">
+                <Link to="/">
+                    <Logo />
+                </Link>
+            </div>
+            <button className="menu-button" onClick={() => handleMenuClick(!menuOpen)}>{menuOpen ? "CLOSE" : "MENU"}</button>
+            {/* <button className={menuOpen ? "menu-button" : "menu-button close"} onClick={() => handleMenuClick(!menuOpen)}></button> */}
             <div className={menuOpen ? "menu show" : "menu close"}>
                 <div className="left"></div>
                 <div className="right"></div>
                 <ul>
                     <li>
-                        <Link to="/">HOME</Link>
+                        <Link to="/" onClick={() => handleMenuClick(false)}>HOME</Link>
                     </li>
                     <li>
-                        <Link to="about">ABOUT</Link>
+                        <Link to="about" onClick={() => handleMenuClick(false)}>ABOUT</Link>
                     </li>
                     <li>
-                        <Link to="services">SERVICES</Link>
+                        <Link to="services" onClick={() => handleMenuClick(false)}>SERVICES</Link>
                     </li>
                     <li>
-                        <Link to="productions">PRODUCTIONS</Link>
+                        <Link to="productions" onClick={() => handleMenuClick(false)}>PRODUCTIONS</Link>
                     </li>
                     <li>
-                        <Link to="faq">FAQ</Link>
+                        <Link to="faq" onClick={() => handleMenuClick(false)}>FAQ</Link>
                     </li>
                     <li>
-                        <Link to="contact">CONTACT</Link>
+                        <Link to="contact" onClick={() => handleMenuClick(false)}>CONTACT</Link>
                     </li>
                 </ul>
             </div>

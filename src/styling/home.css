@@ -1,0 +1,43 @@
+
+#hero-pic-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
+.hero-pic {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /* font-size: 150px; */
+    opacity: 90%;
+    font: 30vh impact;
+    letter-spacing: 0.5rem;
+    line-height: 28vh;
+}
+
+@media screen and (max-width: 768px) {
+    
+    #hero-pic-container {
+        height: 50vh;
+    }
+
+    .overlay {
+        font: 10vh impact;
+        letter-spacing: 0;
+    }
+}

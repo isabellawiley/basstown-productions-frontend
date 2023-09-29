@@ -1,15 +1,34 @@
 
 .header {
     background-color: rgb(0, 0, 0);
+    /* background-color: rgba(0, 0, 0, 0.95); */
     color: white;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 9999;
 }
 
-.logo {
-    height: min(20vh, 150px);
-    width: min(80vw, 800px);
-    background-color: blue;
-    margin: auto;
+.logo-container {
+    /* min-height: max(80%, 110px);
+    max-height: min(80%, 100px); */
+    /* height: 55%; */
+    /* width: min(90vw, 500px); */
+    max-width: 90vw;
+    min-width: 160px;
+    max-height: 75%;
+    /* max-width: 500px; */
+    margin: 0 auto;
+}
+
+#logo {
+    height: 100%;
+    width: 100%;
 }
 
 .menu-button {
@@ -19,25 +38,34 @@
     font-weight: bold;
     font-size: x-large;
     cursor: pointer;
-    margin: 1rem;
+    margin: 0 auto;
+    transition: 0.5s;
+    /* content: "butt"; */
 }
 
+/* .menu-button.close {
+    content: "poop";
+} */
+
 .menu {
-    height: 100%;
+    height: 75%;
     position: fixed;
+    top: min(24vh, 160px);
     z-index: 1;
     left: 0;
     overflow-x: hidden;
-    transition: 0.25s;
+    /* transition: 0.25s; */
     background-color: transparent;
 }
 
 .menu.close {
     width: 0;
+    transition-delay: 0.5s;
 }
 
 .menu.show {
     width: 100%;
+    overflow-y: hidden;
 }
 
 .menu .left, .menu .right{
@@ -71,6 +99,19 @@
     padding: 0;
     margin: 0;
     /* animation: close; */
+    transition: 0.5s;
+    transition-delay: 0.35s;
+    top: 5vh;
+}
+
+.menu.close ul {
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.menu li {
+    position: relative;
+    z-index: 2;
 }
 
 /* @keyframes close {
@@ -90,5 +131,11 @@
 }
 
 .menu li:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 5vh;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: var(--header-height-resp);
+    }
 }
