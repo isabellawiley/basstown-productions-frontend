@@ -24,7 +24,7 @@ function Faq(){
                 <div className="overlay">FAQ'S</div>
             </div>
             <div className="accordion">
-                <button id='question-1' className="accordion-btn" onClick={() => handleAccordion("question-1")}>Question?</button>
+                <button id='question-1' className="accordion-btn" onClick={() => handleAccordion("question-1")}>Question Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</button>
                 <div id='answer-1' className="answer">
                     <p>Answer...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
