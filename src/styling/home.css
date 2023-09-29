@@ -45,6 +45,7 @@
 
 .quote-img {
     width: 35vw;
+    flex-basis: 40%;
 }
 
 .quote-container span {

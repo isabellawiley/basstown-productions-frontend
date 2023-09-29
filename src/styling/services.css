@@ -1,0 +1,22 @@
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.service {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5vh;
+}
+
+.service:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.service-details {
+    flex-basis: 40%;
+    align-items: center;
+    text-align: center;
+}
