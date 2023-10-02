@@ -1,0 +1,124 @@
+
+.social-links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35vw;
+    margin: 10vh auto;
+}
+
+.circle {
+    font-size: 8vw;
+    height: 1em;
+    width: 1em;
+    background-color: #3d9970;
+    position: relative;
+    overflow: hidden;
+    /* box-shadow: inset 0.5em 1em #fff; */
+}
+
+/* INSTAGRAM LOGO */
+
+.insta {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.insta::before {
+    content: '';
+    color: white;
+    position: absolute;
+    /* border-radius: 0.2em; */
+    border-radius: 30%;
+    aspect-ratio: inherit;
+    border: 0.07em solid;
+    width: 55%;
+}
+
+.insta::after {
+    content: '';
+    color: white;
+    position: absolute;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    border: 0.07em solid;
+    width: 20%;
+    box-shadow: 0.18em -0.18em 0 -0.13em;
+}
+
+/* FACEBOOK LOGO */
+
+.facebook {
+    border: .125em solid #3d9970;
+    border-bottom: 0;
+    border-right: .275em solid #3d9970;
+    clip-path: ellipse(50% 50% at 50% 50%);
+    box-sizing: border-box;
+    /* outline: transparent; */
+}
+
+.facebook::before {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    width: .4em;
+    height: 1em;
+    top: .17em;
+    right: -.25em;
+    border: solid #fff;
+    border-width: .04em 0 0 .058em;
+    /* border-radius: .1em; */
+    border-radius: .125em / .1em;
+    box-shadow: 0 0 0 .1em #fff;
+    clip-path: ellipse(150% 130% at 25% 120%);
+}
+
+.facebook::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    top: .38em;
+    right: .01em;
+    width: .425em;
+    height: .14em;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+/* LINKEDIN LOGO */
+
+.linkedin {
+    border: solid #3d9970;
+    border-width: 0 .2em .2em 0;
+    box-sizing: border-box;
+    clip-path: ellipse(50% 50% at 50% 50%);
+}
+
+.linkedin::after {
+    content: '';
+    position: absolute;
+    background-color: #3d9970;
+    width: .08em;
+    height: .4em;
+    border: .125em solid #fff;
+    color: #fff;
+    border-top: 0;
+    border-bottom: 0;
+    top: .4em;
+    left: .22em;
+    box-shadow: 0.41em 0.07em 0 -0.05em;
+}
+
+.linkedin::before {
+    content: '';
+    position: absolute;
+    background-color: #3d9970;
+    width: .27em;
+    height: .27em;
+    right: .00em;
+    top: .4em;
+    border-radius: 50%;
+    box-shadow: -.385em -.26em 0 -.06em #fff, inset -.053em .05em 0 .069em #fff;
+    clip-path: polygon(-150% -100%, 100% -100%, 100% 65%, -150% 85%);
+}

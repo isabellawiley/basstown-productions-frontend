@@ -1,0 +1,54 @@
+
+.accordion {
+    margin: 8vh auto;
+    width: 70%;
+}
+
+.accordion-btn {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    transition: 0.4s;
+    text-align: left;
+    font-size: 3vh;
+    padding: 2vh;
+    margin-top: 2vh;
+}
+
+.accordion-btn::after {
+    content: '\002B';
+    color: #777;
+    float: right;
+    font-size: 3vh;
+    font-weight: bold;
+    /* margin-left: 5px; */
+}
+
+.active, .accordion-btn:hover {
+    background-color: #ccc;
+}
+
+.active::after {
+    content: "\2212";
+}
+
+.answer {
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.2s ease-out;
+    padding: 0 2vh;
+}
+
+@media screen and (max-width: 768px) {
+    .accordion {
+        width: 80%;
+        font-size: 2vh;
+    }
+
+    .accordion-btn {
+        font-size: 2vh;
+    }
+}
