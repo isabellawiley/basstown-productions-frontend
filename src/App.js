@@ -1,6 +1,7 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Faq from "./components/Faq";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Productions from "./components/Productions";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>  
+      <Footer />
     </div>
   );
 }

@@ -122,3 +122,13 @@
     box-shadow: -.385em -.26em 0 -.06em #fff, inset -.053em .05em 0 .069em #fff;
     clip-path: polygon(-150% -100%, 100% -100%, 100% 65%, -150% 85%);
 }
+
+@media screen and (max-width: 768px){
+    .social-links-container {
+        width: 75vw;
+    }
+    
+    .circle {
+        font-size: 20vw;
+    }
+}
