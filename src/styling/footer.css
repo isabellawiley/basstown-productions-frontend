@@ -1,0 +1,43 @@
+
+.footer {
+    background-color: black;
+    /* margin-bottom: 0; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10vh;
+}
+
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35vw;
+    /* margin: 10vh auto; */
+    padding: 10vh;
+}
+
+.newsletter {
+    background-color: antiquewhite;
+    width: 30vw;
+    height: 30vw;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        padding: 15vw;
+        padding-top: 5vw;
+    }
+
+    .footer-links-container {
+        width: 75vw;
+        padding: 0;
+        margin: 10vw;
+    }
+
+    .newsletter {
+        width: 75vw;
+        height: 75vw;
+    }
+}
