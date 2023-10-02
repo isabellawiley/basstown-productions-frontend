@@ -1,9 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import '../styling/header.css';
 import { useState } from "react";
 import Logo from "./images/Logo";
 function Header(){
+    let navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
+
+    function handleLogoClick(){
+        let menuList = document.getElementById("menuList");
+        menuList.style.display = "none";
+
+        setMenuOpen(true);
+        setTimeout(() => {
+            setMenuOpen(false);
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            menuList.style.display = "block";
+            navigate("/");
+        }, 800);
+    }
 
     function handleMenuClick(val){
         setMenuOpen(val);
@@ -13,22 +28,23 @@ function Header(){
         }
         else {
             body.classList.remove('fixed-pos');
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
     }
 
     return(
         <div className="header">
             <div className="logo-container">
-                <Link to="/">
+                <button className="logo-btn" onClick={() => handleLogoClick()}>
                     <Logo />
-                </Link>
+                </button>
             </div>
             <button className="menu-button" onClick={() => handleMenuClick(!menuOpen)}>{menuOpen ? "CLOSE" : "MENU"}</button>
-            {/* <button className={menuOpen ? "menu-button" : "menu-button close"} onClick={() => handleMenuClick(!menuOpen)}></button> */}
             <div className={menuOpen ? "menu show" : "menu close"}>
                 <div className="left"></div>
                 <div className="right"></div>
-                <ul>
+                <ul id="menuList">
                     <li>
                         <Link to="/" onClick={() => handleMenuClick(false)}>HOME</Link>
                     </li>
@@ -49,28 +65,6 @@ function Header(){
                     </li>
                 </ul>
             </div>
-            {/* <div className={menuOpen ? "menu show" : "menu"}>
-                <ul>
-                    <li>
-                        <Link to="/">HOME</Link>
-                    </li>
-                    <li>
-                        <Link to="about">ABOUT</Link>
-                    </li>
-                    <li>
-                        <Link to="services">SERVICES</Link>
-                    </li>
-                    <li>
-                        <Link to="productions">PRODUCTIONS</Link>
-                    </li>
-                    <li>
-                        <Link to="faq">FAQ</Link>
-                    </li>
-                    <li>
-                        <Link to="contact">CONTACT</Link>
-                    </li>
-                </ul>
-            </div> */}
         </div>
     )
 }

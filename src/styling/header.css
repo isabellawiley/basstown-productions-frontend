@@ -14,6 +14,15 @@
     z-index: 9999;
 }
 
+.logo-btn {
+    border: none;
+    background: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    cursor: pointer;
+}
+
 .logo-container {
     /* min-height: max(80%, 110px);
     max-height: min(80%, 100px); */
