@@ -2,9 +2,11 @@ import { Link, useNavigate } from "react-router-dom";
 import '../styling/header.css';
 import { useState } from "react";
 import Logo from "./images/Logo";
+
 function Header(){
     let navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
+    const [guitar, setGuitar] = useState(false);
 
     function handleLogoClick(){
         let menuList = document.getElementById("menuList");
@@ -33,14 +35,42 @@ function Header(){
         }
     }
 
+    function handleGuitars(){
+        let lguitar = document.getElementsByClassName('guitar-left');
+        let rguitar = document.getElementsByClassName('guitar-right');
+
+        // lguitar.classList.add('left-g-rotate');
+        // rguitar.classList.add('right-g-rotate');
+        
+        if(guitar){
+            for(let i = 0; i < 2; i++){
+                lguitar[i].classList.add('left-g-rotate');
+                rguitar[i].classList.add('right-g-rotate');
+            }
+        }
+        else {
+            for(let i = 0; i < 2; i++){
+                lguitar[i].classList.remove('left-g-rotate');
+                rguitar[i].classList.remove('right-g-rotate');
+            }
+        }
+
+        setGuitar(!guitar)
+    }
+
     return(
         <div className="header">
             <div className="logo-container">
-                <button className="logo-btn" onClick={() => handleLogoClick()}>
+                <Link onClick={() => handleLogoClick()}>
+                {/* <button className="logo-btn" onClick={() => handleLogoClick()}>
                     <Logo />
-                </button>
+                </button> */}
+                <Logo />
+                </Link>
             </div>
-            <button className="menu-button" onClick={() => handleMenuClick(!menuOpen)}>{menuOpen ? "CLOSE" : "MENU"}</button>
+            {/* <button onClick={() => handleGuitars()}>guitar</button> */}
+            <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "CLOSE" : "MENU"}</button>
+            {/* <button className={menuOpen ? "menu-button" : "menu-button close"} onClick={() => handleMenuClick(!menuOpen)}></button> */}
             <div className={menuOpen ? "menu show" : "menu close"}>
                 <div className="left"></div>
                 <div className="right"></div>
@@ -65,6 +95,28 @@ function Header(){
                     </li>
                 </ul>
             </div>
+            {/* <div className={menuOpen ? "menu show" : "menu"}>
+                <ul>
+                    <li>
+                        <Link to="/">HOME</Link>
+                    </li>
+                    <li>
+                        <Link to="about">ABOUT</Link>
+                    </li>
+                    <li>
+                        <Link to="services">SERVICES</Link>
+                    </li>
+                    <li>
+                        <Link to="productions">PRODUCTIONS</Link>
+                    </li>
+                    <li>
+                        <Link to="faq">FAQ</Link>
+                    </li>
+                    <li>
+                        <Link to="contact">CONTACT</Link>
+                    </li>
+                </ul>
+            </div> */}
         </div>
     )
 }

@@ -27,9 +27,64 @@ code {
   fill: white;
 }
 
-#guitar {
+#guitar-color {
   fill: #a30000;
 }
+
+.guitar-right {
+  /* animation: 3s g-rot-right infinite; */
+}
+
+/* .right-g-rotate {
+  transform: translate(11.6%, -33.5%) scale(.12726) rotate(5deg);
+} */
+
+@keyframes g-rot-right {
+  50% {
+    transform: translate(86.831px, 1.047px) scale(.12726) rotate(10deg);
+  }
+}
+
+.guitar-left {
+  /* animation: 3s g-rot infinite; */
+}
+
+@keyframes g-rot {
+  50% {
+    transform: matrix(-0.12726, 0, 0, 0.12726, 45.391, 1.047) rotate(10deg);
+  }
+}
+
+/* .left-g-rotate { */
+  /* transform: scale(-.12726, .12726); */
+  /* rotate: -10deg; */
+  /* transform: scale(-.12726, .12726) translate(142%, -400%); */
+  /* transform: scale(-.12726, .12726) translate(-85%, -452%); */
+  /* transform: scale(-.12726, .12726) translate(371%, -345%); */
+  /* transform: scale(-.12726, .12726) translate(590%, -460%); */
+/* } */
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  /* * {
+    scrollbar-width: auto;
+    scrollbar-color: #838085 rgba(90, 90, 90, 0.25);
+  } */
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgba(90, 90, 90, 0.25);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #838085;
+    /* border-radius: 2px; */
+    border: 4px solid #838085;
+  }
 
 
 @media screen and (max-width: 768px) {

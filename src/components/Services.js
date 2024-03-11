@@ -14,22 +14,35 @@ function Services(){
                 <div className="service">
                     <img src={quote1} alt="service" className="quote-img"/>
                     <div className="service-details">
-                        <h2>Service Title</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h2>Photography & Videography</h2>
+                        <ul>
+                            <li>Event Photos & Videos</li>
+                            <li>Portraits</li>
+                            <li>Promotional Videos</li>
+                            <li>Drone Photography</li>
+                        </ul>
                     </div>
                 </div>
                 <div className="service">
                     <img src={quote1} alt="service" className="quote-img"/>
                     <div className="service-details">
-                        <h2>Service Title</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h2>Audio Production</h2>
+                        <ul>
+                            <li>Live Sound Engineering</li>
+                            <li>Studio Recording</li>
+                            <li>Audio Editing & Mixing</li>
+                        </ul>
                     </div>
                 </div>
                 <div className="service">
                     <img src={quote1} alt="service" className="quote-img"/>
                     <div className="service-details">
-                        <h2>Service Title</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h2>Live Event Production</h2>
+                        <ul>
+                            <li>Budgeting & Scheduling</li>
+                            <li>Live Streaming</li>
+                            <li>Public Outreach</li>
+                        </ul>
                     </div>
                 </div>
             </div>

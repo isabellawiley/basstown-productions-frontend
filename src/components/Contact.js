@@ -1,5 +1,6 @@
 import hero from "./images/hero-img.png";
 import '../styling/contact.css';
+import Logo from "./images/Logo";
 
 function Contact(){
 
@@ -16,6 +17,9 @@ function Contact(){
                     <div className="circle linkedin"></div>
                 </div>
             </div>
+            {/* <div className="poop">
+                <Logo />
+            </div> */}
         </div>
     )
 }
