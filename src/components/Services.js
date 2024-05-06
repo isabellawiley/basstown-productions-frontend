@@ -39,6 +39,7 @@ function Services(){
                     <div className="service-details">
                         <h2>Live Event Production</h2>
                         <ul>
+                            <li>Projected Visuals</li>
                             <li>Budgeting & Scheduling</li>
                             <li>Live Streaming</li>
                             <li>Public Outreach</li>

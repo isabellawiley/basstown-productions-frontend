@@ -4,12 +4,13 @@ function Footer(){
 
     return(
         <div className="footer">
+            <h1>STAY CONNECTED</h1>
             <div className="footer-links-container">
-                <div className="circle insta"></div>
-                <div className="circle facebook"></div>
-                <div className="circle linkedin"></div>
+            <a href="https://www.instagram.com/thisismichaelb/" target="_blank"><div className="circle insta"></div></a>
+            <a href="https://www.facebook.com/michael.bartkowiak?mibextid=LQQJ4d" target="_blank"><div className="circle facebook"></div></a>
+            <a href="https://www.linkedin.com/in/michaelbartkowiak/" target="_blank"><div className="circle linkedin"></div></a>
             </div>
-            <div className='newsletter'></div>
+            {/* <div className='newsletter'></div> */}
         </div>
     )
 }

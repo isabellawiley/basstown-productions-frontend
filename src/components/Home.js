@@ -21,7 +21,7 @@ function Home(){
                     <span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</span>
                 </div>
             </div>
-            <div className="blog-container">
+            {/* <div className="blog-container">
                 <div className="blog-article">
                     <span>Blog Title</span>
                 </div>
@@ -31,7 +31,7 @@ function Home(){
                 <div className="blog-article">
                     <span>Blog Title</span>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

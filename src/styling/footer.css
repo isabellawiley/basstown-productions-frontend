@@ -6,6 +6,12 @@
     justify-content: space-around;
     align-items: center;
     padding: 10vh;
+    flex-direction: column;
+}
+
+.footer h1 {
+    font-size: 8vw;
+    color: #a30000;
 }
 
 .footer-links-container {

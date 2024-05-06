@@ -1,6 +1,7 @@
 import hero from "./images/hero-img.png";
 import '../styling/contact.css';
 import Logo from "./images/Logo";
+import ContactForm from "./ContactForm";
 
 function Contact(){
 
@@ -12,11 +13,12 @@ function Contact(){
             </div>
             <div>
                 <div className="social-links-container">
-                    <div className="circle insta"></div>
-                    <div className="circle facebook"></div>
-                    <div className="circle linkedin"></div>
+                    <a href="https://www.instagram.com/thisismichaelb/" target="_blank"><div className="circle insta"></div></a>
+                    <a href="https://www.facebook.com/michael.bartkowiak?mibextid=LQQJ4d" target="_blank"><div className="circle facebook"></div></a>
+                    <a href="https://www.linkedin.com/in/michaelbartkowiak/" target="_blank"><div className="circle linkedin"></div></a>
                 </div>
             </div>
+            <ContactForm />
             {/* <div className="poop">
                 <Logo />
             </div> */}
