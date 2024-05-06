@@ -14,7 +14,7 @@ function ContactForm(){
         setResult("Sending...");
         const formData = new FormData(event.target);
 
-        formData.append("access_key",);
+        formData.append("access_key","cc798571-fbf5-4a7c-9694-102e335f51f5");
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -24,7 +24,7 @@ function ContactForm(){
         const data = await response.json();
 
         if(data.success) {
-            setResult("Form Submitted Successfully");
+            setResult("Message sent!");
             event.target.reset();
         }
         else {
@@ -36,7 +36,7 @@ function ContactForm(){
 
     return(
         <div>
-            <form className="ct-form">
+            <form className="ct-form" onSubmit={onSubmit}>
                 <label for="name">Name</label>
                 <input id="name" type="text" name="name" placeholder="Type name here" required/>
                 <label for="email">Email</label>
@@ -52,6 +52,7 @@ function ContactForm(){
                 <textarea id="message" name="message" placeholder="A brief description here" required></textarea>
 
                 <button className="sub-btn" type="submit">Send Message</button>
+                <span>{result}</span>
             </form>
         </div>
     )
