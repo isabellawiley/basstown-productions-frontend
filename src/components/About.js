@@ -9,8 +9,9 @@ function About(){
                 <img src={hero} alt="hero" className="hero-pic"/>
                 <div className="overlay">ABOUT</div>
             </div>
-            <span className="about">
-                <h3>Welcome to Basstown Productions - Where Creativity Meets Precision</h3>
+            <div className="about">
+                <h1>Welcome to Basstown Productions</h1>
+                <p><strong>Where Creativity Meets Precision</strong></p>
                 <p>
                 At Basstown Productions, we are more than just a production company; we are passionate storytellers, visual wizards, and audio maestros dedicated to bringing your ideas to life. With a rich history in the industry, we have established ourselves as a leader in video and audio production.
                 </p>
@@ -44,7 +45,7 @@ function About(){
                 We invite you to explore the possibilities with Basstown Productions. Whether you have a specific project in mind or you're looking for inspiration, our team is ready to embark on a creative journey with you.
                 Thank you for considering Basstown Productions. We look forward to turning your ideas into unforgettable productions.
                 </p>
-</span>
+</div>
         </div>
     )
 }

@@ -6,10 +6,33 @@
     margin: 10vh auto;
 }
 
+.about h1 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.about p:first-of-type {
+    margin-top: 0;
+    text-align: center;
+}
+
 @media screen and (max-width: 768px) {
     .about {
         font-size: 4vh;
         text-align: center;
         width: 80vw;
+    }
+
+    .about h1 {
+        font-size: 14vw;
+    }
+
+    .about p:first-of-type {
+        font-size: 6vw;
+    }
+
+    .about {
+        text-align: left;
+        font-size: 4.5vw;
     }
 }
