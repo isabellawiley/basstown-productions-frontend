@@ -49,17 +49,14 @@
     cursor: pointer;
     margin: 0 auto;
     transition: 0.5s;
-    /* content: "butt"; */
+    z-index: 10;
 }
-
-/* .menu-button.close {
-    content: "poop";
-} */
 
 .menu {
     height: 75%;
     position: fixed;
-    top: min(24vh, 160px);
+    /* top: min(24vh, 160px); */
+    top: var(--header-height);
     z-index: 1;
     left: 0;
     overflow-x: hidden;
@@ -146,5 +143,9 @@
 @media screen and (max-width: 768px) {
     .header {
         height: var(--header-height-resp);
+    }
+
+    .menu {
+        top: var(--header-height-resp);
     }
 }
