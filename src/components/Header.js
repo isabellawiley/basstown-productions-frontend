@@ -9,30 +9,39 @@ function Header(){
     const [guitar, setGuitar] = useState(false);
 
     function handleLogoClick(){
+        let body = document.querySelector('body');
         let menuList = document.getElementById("menuList");
         menuList.style.display = "none";
 
         setMenuOpen(true);
         setTimeout(() => {
             setMenuOpen(false);
-            document.body.scrollTop = 0;
+            body.scrollTop = 0;
+            body.classList.remove('fixed-pos');
             document.documentElement.scrollTop = 0;
             menuList.style.display = "block";
             navigate("/");
         }, 800);
     }
 
-    function handleMenuClick(val){
+    function handleNavClick(val){
         setMenuOpen(val);
         let body = document.querySelector('body');
         if(!menuOpen){
             body.classList.add('fixed-pos');
+            console.log("hi")
         }
         else {
             body.classList.remove('fixed-pos');
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
+            console.log("butt")
         }
+    }
+
+    function handleMenuBtn(){
+        setMenuOpen(!menuOpen);
+        handleNavClick(true);
     }
 
     function handleGuitars(){
@@ -62,36 +71,32 @@ function Header(){
         <div className="header">
             <div className="logo-container">
                 <Link onClick={() => handleLogoClick()}>
-                {/* <button className="logo-btn" onClick={() => handleLogoClick()}>
-                    <Logo />
-                </button> */}
                 <Logo />
                 </Link>
             </div>
             {/* <button onClick={() => handleGuitars()}>guitar</button> */}
-            <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "CLOSE" : "MENU"}</button>
-            {/* <button className={menuOpen ? "menu-button" : "menu-button close"} onClick={() => handleMenuClick(!menuOpen)}></button> */}
+            <button className="menu-button" onClick={handleMenuBtn}>{menuOpen ? "CLOSE" : "MENU"}</button>
             <div className={menuOpen ? "menu show" : "menu close"}>
                 <div className="left"></div>
                 <div className="right"></div>
                 <ul id="menuList">
                     <li>
-                        <Link to="/" onClick={() => handleMenuClick(false)}>HOME</Link>
+                        <Link to="/" onClick={() => handleNavClick(false)}>HOME</Link>
                     </li>
                     <li>
-                        <Link to="about" onClick={() => handleMenuClick(false)}>ABOUT</Link>
+                        <Link to="about" onClick={() => handleNavClick(false)}>ABOUT</Link>
                     </li>
                     <li>
-                        <Link to="services" onClick={() => handleMenuClick(false)}>SERVICES</Link>
+                        <Link to="services" onClick={() => handleNavClick(false)}>SERVICES</Link>
                     </li>
                     <li>
-                        <Link to="productions" onClick={() => handleMenuClick(false)}>PRODUCTIONS</Link>
+                        <Link to="productions" onClick={() => handleNavClick(false)}>PRODUCTIONS</Link>
                     </li>
                     <li>
-                        <Link to="faq" onClick={() => handleMenuClick(false)}>FAQ</Link>
+                        <Link to="faq" onClick={() => handleNavClick(false)}>FAQ</Link>
                     </li>
                     <li>
-                        <Link to="contact" onClick={() => handleMenuClick(false)}>CONTACT</Link>
+                        <Link to="contact" onClick={() => handleNavClick(false)}>CONTACT</Link>
                     </li>
                 </ul>
             </div>
