@@ -35,6 +35,7 @@
     aspect-ratio: inherit;
     border: 0.07em solid;
     width: 55%;
+    height: 55%;
 }
 
 .insta::after {
