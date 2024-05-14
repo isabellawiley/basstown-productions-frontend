@@ -124,12 +124,6 @@
     clip-path: polygon(-150% -100%, 100% -100%, 100% 65%, -150% 85%);
 }
 
-.poop {
-    background-color: #4faa75;
-    width: 75vw;
-    margin: auto;
-}
-
 .ct-form {
     display: flex;
     flex-direction: column;
@@ -145,13 +139,14 @@
 }
 
 .sub-btn {
-    width: 25%;
+    width: 30%;
     margin: 1.5rem auto;
     font: icon;
     color: white;
     background-color: black;
     border: none;
-    padding: .3rem;
+    padding: 1rem;
+    /* padding: .3rem; */
     overflow: hidden;
     position: relative;
     transition: all .3s ease;
@@ -196,5 +191,6 @@
 
     .sub-btn {
         width: 50%;
+        font-size: larger;
     }
 }
