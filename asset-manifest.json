@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/basstown-productions-frontend/static/css/main.a1df0bb7.css",
-    "main.js": "/basstown-productions-frontend/static/js/main.9065f520.js",
+    "main.js": "/basstown-productions-frontend/static/js/main.c7ee49d1.js",
     "static/js/787.5bb1ddf2.chunk.js": "/basstown-productions-frontend/static/js/787.5bb1ddf2.chunk.js",
     "static/media/11_17_2023_mister_data-08.jpg": "/basstown-productions-frontend/static/media/11_17_2023_mister_data-08.1470f7804ea6399242fe.jpg",
     "static/media/2_25_2024_dungeon_synth-15.jpg": "/basstown-productions-frontend/static/media/2_25_2024_dungeon_synth-15.2264183435f853ac23d1.jpg",
@@ -11,11 +11,11 @@
     "static/media/hero-img.png": "/basstown-productions-frontend/static/media/hero-img.f7072ecc1b3a6fa5fe6f.png",
     "index.html": "/basstown-productions-frontend/index.html",
     "main.a1df0bb7.css.map": "/basstown-productions-frontend/static/css/main.a1df0bb7.css.map",
-    "main.9065f520.js.map": "/basstown-productions-frontend/static/js/main.9065f520.js.map",
+    "main.c7ee49d1.js.map": "/basstown-productions-frontend/static/js/main.c7ee49d1.js.map",
     "787.5bb1ddf2.chunk.js.map": "/basstown-productions-frontend/static/js/787.5bb1ddf2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a1df0bb7.css",
-    "static/js/main.9065f520.js"
+    "static/js/main.c7ee49d1.js"
   ]
 }
