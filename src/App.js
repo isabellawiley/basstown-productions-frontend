@@ -13,12 +13,12 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path="/basstown-productions-frontend/" element={<Home />} />
-        <Route path="/basstown-productions-frontend/about" element={<About />} />
-        <Route path="/basstown-productions-frontend/services" element={<Services />} />
-        <Route path="/basstown-productions-frontend/productions" element={<Productions />} />
-        <Route path="/basstown-productions-frontend/faq" element={<Faq />} />
-        <Route path="/basstown-productions-frontend/contact" element={<Contact />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/productions" element={<Productions />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>  
       <Footer />
     </div>
